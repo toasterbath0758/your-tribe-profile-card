@@ -2,8 +2,33 @@
   box-sizing: border-box;
 }
 
+body
+
+{ background-image: url(../assets/illusionbg2.gif);background-repeat: no-repeat;background-size: cover;
+}
+
 html:has(.profile-card-example) {
   height: 100vh;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/montserrat1/Montserrat-Regular.ttf);
+}
+p
+{
+font-family: Montserrat;
+font-size: x-small;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/montserrat1/Montserrat-Regular.ttf);
+}
+dt
+{
+  font-family: Montserrat;
+  font-size: smaller;
 }
 
 body:has(.profile-card-example) {
@@ -11,8 +36,8 @@ body:has(.profile-card-example) {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: open sans;
-  color: #10214e;
+  font-family: Montserrat;
+  color: #ffffff;
 }
 
 article.profile-card-example {
@@ -26,8 +51,8 @@ article.profile-card-example {
   min-width: 20em;
   border-radius: 1rem;
   background: rgb(0,239,255);
-  background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
-  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  background: linear-gradient(0deg, rgb(79, 2, 2) 40%, #5431ff 100%);
+  box-shadow: 0 0 50px 50px rgba(0,0,0,.1);
   transition: .25s;
 }
 
@@ -39,12 +64,25 @@ header.profile-card-example-header {
   justify-content: flex-end;
 
   /* Je kunt selectors nesten! */
+ 
   h1 {
     margin: 2rem 0 1rem;
-    color: rgba(0,239,255,1);
+    color: rgb(0, 0, 0);
+  }
+
+    c {
+    margin: 2rem 0 1rem;
+    color: rgb(255, 255, 255);
   }
 
 }
+    dt {
+    margin: 2rem 0 1rem;
+    color:rgb(42, 42, 42);
+  }
+  
+
+
 
 button.profile-card-example-button {
   position: absolute;
@@ -67,11 +105,11 @@ button.profile-card-example-button svg {
   position: absolute;
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
-  stroke: #4e54c8;
+  stroke: #2027a9;
   transition-delay: .25s;
 }
 button.profile-card-example-button:focus svg {
-  stroke: rgba(0,239,255,1);
+  stroke: rgb(255, 255, 255);
 }
 button.profile-card-example-button svg:nth-of-type(2) {
   opacity: 0;
@@ -83,9 +121,9 @@ button.profile-card-example-button svg:nth-of-type(2) {
   top: 2rem;
   width: 10em;
   height: auto;
-  border: 5px solid #fff;
+  border: 5px solid #ffffff;
   border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
   transition: .25s .15s;
 }
 
@@ -103,12 +141,12 @@ button.profile-card-example-button svg:nth-of-type(2) {
   margin-bottom: 0;
   padding: 5rem 0 3rem;
   text-align: center;
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
 
   dt {
     margin-top: .25rem;
     padding-top: .25rem;
-    border-top: 1px solid rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: bold;
     &:nth-of-type(1) {
       grid-area: html-dt;
@@ -143,7 +181,7 @@ button.profile-card-example-button svg:nth-of-type(2) {
   padding: 3rem 2rem;
   border-radius: 0 0 1rem 1rem;
   text-align: center;
-  background: rgba(255,255,255, 0.5);
+  background: rgb(42, 42, 42);
 }
 
 /* Deze styles zijn van toepassing als je op de knop klikt */
@@ -172,4 +210,21 @@ body.is-expanded .profile-card-example-dl dd {
 
 body.is-expanded .profile-card-example-img {
   width: 15em;
+}
+
+.profile-card-example-img-wrapper {
+  display: grid;
+  img {
+    grid-area: -1 / 1;
+    transition: none;
+  }
+  img:last-child {
+    order: -1;
+  }
+}
+
+.profile-card-example-img-wrapper:hover {
+  img:first-child {
+    visibility: hidden;
+  }
 }
