@@ -184,7 +184,7 @@ button.profile-card-example-button svg:nth-of-type(2) {
   background: rgb(42, 42, 42);
 }
 
-/* Deze styles zijn van toepassing als je op de knop klikt */
+/* Deze styles zijn van toepassing als je op de knop klikt !deze knop staat uit!*/
 body.is-expanded {
   font-size: 1.15em;
 }
@@ -211,6 +211,8 @@ body.is-expanded .profile-card-example-dl dd {
 body.is-expanded .profile-card-example-img {
   width: 15em;
 }
+
+/*hieronder een rollover(hover) functie voor het portret van mijn gezicht*/
 
 .profile-card-example-img-wrapper {
   display: grid;
