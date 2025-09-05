@@ -12,8 +12,5 @@ let audio1 = document.querySelector('#myAudio')
   audio1.play(); 
 } 
 
-function pauseAudio() { 
-  audio1.pause(); 
-} 
 
      
